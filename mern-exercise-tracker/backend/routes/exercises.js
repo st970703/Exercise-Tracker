@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const Exercise = require('../models/exercise.model');
+let Exercise = require('../models/exercise.model');
 
 router.route('/').get(
     (req, res) => {
@@ -8,21 +8,25 @@ router.route('/').get(
         .catch(err=> res.status(400).json('Error: ' + err));
     });
 
-router.route('/add').post((req, res) => {
-    const username = req.body.username;
-    const description = req.body.description;
-    const duration = Number(req.body.duration);
-    const date = Date.parse(req.body.date);
+router.route('/add').post(
+  (req, res) => {
+    console.log("req.body = ");
+    console.log(req.body);
 
-    const newExercise = new Exercise({
-        username,
-        description,
-        duration,
-        date,
+      const username = req.body.username;
+      const description = req.body.description;
+      const duration = Number(req.body.duration);
+      const date = Date.parse(req.body.date);
+
+      const newExercise = new Exercise({
+          username,
+          description,
+          duration,
+          date,
     });
 
     newExercise.save()
-    .then(() => res.join('Exercise added!'))
+    .then(() => res.json('Exercise added!'))
     .catch(err => res.status(400).json('Error: ' + err));
 });
 
