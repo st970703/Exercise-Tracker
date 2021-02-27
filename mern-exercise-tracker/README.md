@@ -18,7 +18,7 @@ To run the backend:
 To run the React frontend:
 * Go to the mern-exercise-tracker directory in your command prompt
 * Run the `npm start` command
-* Open http://localhost:3000/ to see your app
+* Open http://localhost:3000/ to see your App
 
 ### Prerequisites
 
