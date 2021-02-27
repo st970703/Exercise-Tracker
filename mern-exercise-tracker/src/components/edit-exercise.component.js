@@ -37,6 +37,18 @@ export default class EditExercise extends Component {
       .catch((error) => {
         console.log(error);
       })
+
+      axios.get('http://localhost:5000/users/')
+      .then(response => {
+        if (response.data.length > 0) {
+          this.setState({
+            users: response.data.map(user => user.username),
+          })
+        }
+      })
+      .catch((error) => {
+        console.log(error);
+      })
   }
 
   onChangeUsername(e) {
