@@ -37,6 +37,7 @@ Use the `npm install` command to install packages
 * [axios](https://github.com/axios/axios)
 * [React Date Picker](https://www.npmjs.com/package/react-datepicker)
 * [Bootstrap](https://getbootstrap.com/)
+* [Mongoose](https://mongoosejs.com/)
 
 ## License
 
