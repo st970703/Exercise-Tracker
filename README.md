@@ -1,7 +1,7 @@
 # An Exercise Tracker Application
 
 * This is an exercise tracker application using the MERN stack (MongoDB, Express, React, Node.js).
-* This follows the [freecodecamp tutorial](https://www.freecodecamp.org/news/learn-the-mern-stack-tutorial/).
+* This App follows the [freecodecamp tutorial](https://www.freecodecamp.org/news/learn-the-mern-stack-tutorial/).
 
 ## Getting Started
 
